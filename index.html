@@ -3,19 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>명품홈크리닝 (Luxury Home Cleaning) | 입주청소, 사무실·상가청소, 줄눈시공, 새집증후군 전문</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="명품홈크리닝 - 아파트, 신축빌라 입주청소, 사무실/상가 정기청소, 준공청소, 욕실 및 타일 줄눈시공, 새집증후군 전문 케어. 대표 김병수 010-7109-8133">
-    <meta name="keywords" content="명품홈크리닝, 입주청소, 사무실청소, 상가청소, 준공청소, 줄눈시공, 새집증후군, 청소업체추천, 010-7109-8133">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="명품홈크리닝 (Luxury Home Cleaning)">
-    <meta property="og:description" content="★사무실★상가★아파트★입주청소★줄눈시공★새집증후군 대표 김병수 직통 문의: 010-7109-8133">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80">
+    <title>명품홈크리닝 | 프리미엄 전문 청소 & 케어 서비스</title>
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,1063 +13,1065 @@
                 extend: {
                     colors: {
                         brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#0284c7',
-                            600: '#0369a1',
-                            700: '#075985',
-                            800: '#0c4a6e',
-                            900: '#0f172a',
+                            50: '#F0FDFA',
+                            100: '#CCFBF1',
+                            500: '#14B8A6',
+                            600: '#0D9488', // Main Teal Point
+                            700: '#0F766E',
+                            900: '#134E4A',
+                        },
+                        accent: {
+                            500: '#06B6D4', // Cyan accent
+                            600: '#0891B2',
                         },
                         navy: {
-                            800: '#1b2a4a',
-                            900: '#0f172a',
-                        },
-                        gold: {
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                            600: '#d97706',
+                            800: '#1E293B',
+                            900: '#0F172A', // Deep Navy Main Base
+                            950: '#020617',
                         }
                     },
                     fontFamily: {
-                        sans: ['Noto Sans KR', 'Inter', 'sans-serif'],
+                        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'Roboto', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
 
-    <!-- FontAwesome & Google Fonts -->
+    <!-- Font & Icons -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Noto Sans KR', sans-serif;
+            font-family: 'Pretendard', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
             word-break: keep-all;
         }
-        /* Custom Before & After Slider styles */
-        .slider-container {
-            position: relative;
-            user-select: none;
-            touch-action: pan-y;
+        /* Custom Glassmorphism */
+        .glass-header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
-        .img-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 50%;
-            overflow: hidden;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 4px;
-            background-color: #ffffff;
-            cursor: ew-resize;
-            transform: translateX(-50%);
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .handle-circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 44px;
-            height: 44px;
-            background-color: #ffffff;
-            border: 3px solid #0284c7;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #0284c7;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0D9488;
+            border-radius: 4px;
+        }
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #0D9488 0%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-light {
+            background: linear-gradient(135deg, #5EEAD4 0%, #67E8F9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+<body class="antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-navy-900 text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-            <div class="flex items-center gap-3">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500/20 text-gold-400 font-semibold text-xs border border-gold-500/30">
-                    <i class="fa-solid fa-crown text-[10px]"></i> 명품홈크리닝
-                </span>
-                <span class="hidden md:inline font-light text-slate-300">★사무실 ★상가 ★아파트 ★입주청소 ★줄눈시공 ★새집증후군 전문</span>
-            </div>
-            <div class="flex items-center gap-4 text-xs font-medium ml-auto">
-                <a href="tel:010-7109-8133" class="hover:text-sky-300 flex items-center gap-1.5 transition-colors">
-                    <i class="fa-solid fa-phone text-emerald-400"></i>
-                    <span>대표 직통: <strong>010-7109-8133</strong></span>
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-header border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- LOGO (Modern Symbolic Emblem + Typography) -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="relative w-11 h-11 rounded-xl bg-gradient-to-br from-brand-500 to-accent-600 p-0.5 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <div class="w-full h-full bg-navy-900 rounded-[10px] flex items-center justify-center overflow-hidden relative">
+                            <!-- Clean Sparkle & Shield SVG Icon -->
+                            <svg class="w-6 h-6 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="m9 12 2 2 4-4" class="text-white" stroke="currentColor"/>
+                                <path d="M19 3l1.5 1.5L19 6l-1.5-1.5z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-500 transition-colors">
+                            명품홈크리닝
+                        </span>
+                        <span class="text-[10px] font-semibold tracking-widest text-brand-500 uppercase">
+                            Luxury Home Cleaning
+                        </span>
+                    </div>
                 </a>
-                <span class="text-slate-600">|</span>
-                <span class="hidden sm:inline text-slate-400"><i class="fa-solid fa-fax mr-1"></i>Fax: 1515-010-7109-8133</span>
+
+                <!-- Desktop Nav Items -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">브랜드 소개</a>
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">5대 전문 서비스</a>
+                    <a href="#before-after" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">시공 사례</a>
+                    <a href="#calculator" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">스마트 견적 계산기</a>
+                    <a href="#card" class="text-sm font-medium text-slate-300 hover:text-brand-500 transition-colors">디지털 명함</a>
+                </nav>
+
+                <!-- Desktop Header CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:010-7109-8133" class="flex items-center space-x-2 text-slate-300 hover:text-white text-xs font-semibold px-3 py-2 rounded-lg bg-slate-800/60 border border-slate-700">
+                        <i class="fa-solid fa-phone text-brand-500"></i>
+                        <span>010-7109-8133</span>
+                    </a>
+                    <a href="#contact" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-semibold text-sm shadow-md shadow-brand-600/30 transition-all hover:-translate-y-0.5 active:translate-y-0">
+                        상담문의 작성
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="메뉴 열기">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600 to-navy-900 flex items-center justify-center text-white text-2xl font-black shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
-                    名
-                </div>
-                <div>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-2xl font-extrabold tracking-tight text-navy-900">명품홈크리닝</span>
-                        <span class="text-xs font-bold text-brand-600 tracking-widest hidden sm:inline">LUXURY HOME CLEANING</span>
-                    </div>
-                    <p class="text-[11px] text-slate-500 font-medium">프리미엄 공간 케어 & 줄눈시공 전문업체</p>
-                </div>
-            </a>
-
-            <!-- Desktop Nav Menu -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
-                <a href="#services" class="hover:text-brand-600 transition-colors">주요사업영역</a>
-                <a href="#before-after" class="hover:text-brand-600 transition-colors">시공갤러리</a>
-                <a href="#calculator" class="hover:text-brand-600 transition-colors">스마트견적</a>
-                <a href="#about" class="hover:text-brand-600 transition-colors">회사소개</a>
-                <a href="#inquiry" class="hover:text-brand-600 transition-colors">견적문의접수</a>
-            </nav>
-
-            <!-- Quick Action CTA Button -->
-            <div class="flex items-center gap-3">
-                <a href="#inquiry" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md shadow-brand-600/30 transition-all hover:shadow-lg">
-                    <i class="fa-regular fa-paper-plane"></i>
-                    <span>무료 견적신청</span>
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900/95 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#about" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800">브랜드 소개</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800">5대 전문 서비스</a>
+            <a href="#before-after" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800">시공 사례 (Before & After)</a>
+            <a href="#calculator" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800">스마트 견적 계산기</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800">상담 및 견적 문의</a>
+            <a href="#card" class="mobile-nav-link block px-3 py-2.5 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800">디지털 명함 정보</a>
+            <div class="pt-2 flex flex-col space-y-2">
+                <a href="tel:010-7109-8133" class="w-full text-center py-3 rounded-xl bg-slate-800 text-brand-500 font-bold border border-slate-700">
+                    <i class="fa-solid fa-phone mr-2"></i>010-7109-8133 전화연결
                 </a>
-                <a href="tel:010-7109-8133" class="inline-flex sm:hidden items-center justify-center w-10 h-10 rounded-xl bg-emerald-600 text-white shadow-md">
-                    <i class="fa-solid fa-phone"></i>
+                <a href="#contact" class="mobile-nav-link w-full text-center py-3 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 text-white font-bold">
+                    무료 견적 문의하기
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Main Hero Section (Centered & Premium Layout) -->
-    <section class="relative bg-gradient-to-b from-navy-900 via-brand-900 to-slate-900 text-white overflow-hidden py-20 lg:py-28">
-        <!-- Background Grid Pattern & Ambient Glow -->
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:24px_24px]"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- HERO SECTION (Centered Impactful Clean Layout) -->
+    <section class="relative pt-36 pb-24 lg:pt-44 lg:pb-36 bg-navy-900 text-white overflow-hidden">
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-600/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-accent-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="space-y-6 max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-gold-400 text-xs font-semibold shadow-inner">
-                    <i class="fa-solid fa-crown text-gold-400"></i> 대한민국 1% 프리미엄 공간 케어 서비스
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-800/80 border border-brand-500/30 text-brand-500 text-xs sm:text-sm font-semibold mb-8 backdrop-blur-md">
+                <span class="flex h-2 w-2 rounded-full bg-brand-500 animate-ping"></span>
+                <span>대한민국 프리미엄 공간 케어의 기준</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight sm:leading-none mb-6">
+                눈에 보이는 깨끗함 그 이상,<br>
+                <span class="text-gradient-light">명품 공간 케어 솔루션</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="max-w-3xl mx-auto text-base sm:text-xl text-slate-300 font-normal leading-relaxed mb-10">
+                입주청소부터 사무실 정기 관리, 특수 디테일링, 줄눈시공, 새집증후군 케어까지.<br class="hidden sm:inline">
+                독자적인 기술력과 첨단 고온 스팀 장비로 건강하고 쾌적한 환경을 완성합니다.
+            </p>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+                <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold text-base shadow-xl shadow-brand-600/25 transition-all hover:-translate-y-1 text-center">
+                    <i class="fa-solid fa-calculator mr-2"></i>스마트 견적 계산
+                </a>
+                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-800/90 hover:bg-slate-800 text-slate-200 hover:text-white border border-slate-700 font-bold text-base transition-all hover:-translate-y-1 text-center backdrop-blur-md">
+                    <i class="fa-regular fa-paper-plane mr-2"></i>상담 문의 접수
+                </a>
+            </div>
+
+            <!-- Key Metric Highlights -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-12 border-t border-slate-800/80 max-w-4xl mx-auto">
+                <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-500 mb-1">99.8%</div>
+                    <div class="text-xs sm:text-sm text-slate-400">고객 만족도</div>
                 </div>
+                <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-accent-500 mb-1">100%</div>
+                    <div class="text-xs sm:text-sm text-slate-400">책임 A/S 보장</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-500 mb-1">친환경</div>
+                    <div class="text-xs sm:text-sm text-slate-400">무독성 세제 사용</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-accent-500 mb-1">전문가</div>
+                    <div class="text-xs sm:text-sm text-slate-400">베테랑 전담 팀</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
-                    깨끗함을 넘어선<br class="hidden sm:inline"/>
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-sky-300 to-teal-200">명품의 디테일</span>을 선사합니다
-                </h1>
-
-                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
-                    ★사무실 ★상가 ★아파트 ★입주청소 ★줄눈시공 ★새집증후군<br/>
-                    오랜 노하우의 전문 인력과 최첨단 장비로 건강하고 쾌적한 환경을 완성합니다.
+    <!-- BENTO GRID SECTION: 브랜드 강점 -->
+    <section id="about" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-600 tracking-widest uppercase mb-2">WHY LUXURY CLEANING</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">
+                    차원이 다른 디테일,<br class="sm:hidden"> 명품홈크리닝만의 4가지 핵심 강점
                 </p>
+            </div>
 
-                <!-- Action CTA Button Group -->
-                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-500 to-sky-500 hover:from-brand-600 hover:to-sky-600 text-white font-bold text-base shadow-lg shadow-sky-500/25 transition-all text-center flex items-center justify-center gap-2.5">
-                        <i class="fa-solid fa-calculator"></i>
-                        <span>스마트 견적 계산하기</span>
-                    </a>
-                    <a href="#inquiry" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-base backdrop-blur-md transition-all text-center flex items-center justify-center gap-2.5">
-                        <i class="fa-solid fa-file-signature text-sky-300"></i>
-                        <span>상세 견적 접수하기</span>
-                    </a>
-                    <a href="tel:010-7109-8133" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-600/30 transition-all text-center flex items-center justify-center gap-2.5">
-                        <i class="fa-solid fa-phone-volume text-gold-400"></i>
-                        <span>전화 직통 문의 (김병수 대표)</span>
-                    </a>
+            <!-- Bento Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Large Feature 1 -->
+                <div class="md:col-span-2 p-8 sm:p-10 rounded-3xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-navy-900 mb-3">초고온 고압 스팀 & 친환경 케어 시스템</h3>
+                        <p class="text-slate-600 leading-relaxed text-base">
+                            유해 세제 잔여물이 남지 않는 100% 친환경 인증 세제와 독일제 전문 고온 스팀 클리닝 장비를 사용하여 배수구, 수전, 묵은 때, 미세 유해균을 99.9% 완벽하게 살균 디테일링합니다.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-100 flex items-center text-sm font-semibold text-brand-600">
+                        <span>안심 구역 프리미엄 소독 케어</span>
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
                 </div>
 
-                <!-- Key Trust Badges -->
-                <div class="pt-10 grid grid-cols-3 gap-4 border-t border-white/10 text-center max-w-2xl mx-auto">
-                    <div class="p-3">
-                        <div class="text-2xl sm:text-3xl font-extrabold text-sky-300">100%</div>
-                        <div class="text-xs text-slate-400 mt-1 font-medium">직영팀 전담 책임제</div>
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-3xl bg-navy-900 text-white shadow-xl border border-slate-800 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-slate-800 text-brand-500 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-500 group-hover:text-navy-900 transition-colors">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">100% 본사 직영 책임제</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            하청 없는 베테랑 마스터 크리너 직접 투입. 시공 완료 후 고객 현장 검수 및 미흡사항 발생 시 100% 무료 재A/S를 약속합니다.
+                        </p>
                     </div>
-                    <div class="p-3">
-                        <div class="text-2xl sm:text-3xl font-extrabold text-sky-300">친환경</div>
-                        <div class="text-xs text-slate-400 mt-1 font-medium">독성 제로 세제 및 스팀</div>
+                    <div class="mt-8 text-xs font-bold text-brand-500 tracking-wider uppercase">Quality Guarantee</div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-3xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-brand-600 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3">새집증후군 & 피톤치드 코팅</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            신축 입주 시 발생하는 포름알데히드 및 화학물질 분해 공정. 편백나무 추출 순수 피톤치드로 쾌적한 안식처를 완성합니다.
+                        </p>
                     </div>
-                    <div class="p-3">
-                        <div class="text-2xl sm:text-3xl font-extrabold text-sky-300">100% A/S</div>
-                        <div class="text-xs text-slate-400 mt-1 font-medium">검수 후 완벽 사후관리</div>
+                    <div class="mt-8 text-xs font-bold text-brand-600 tracking-wider uppercase">Clean Air Solution</div>
+                </div>
+
+                <!-- Large Feature 4 -->
+                <div class="md:col-span-2 p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-brand-600 to-accent-600 text-white shadow-xl shadow-brand-600/20 flex flex-col justify-between hover:shadow-2xl transition-all duration-300 group">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-white/20 text-white backdrop-blur-md flex items-center justify-center text-2xl font-bold mb-6">
+                            <i class="fa-solid fa-building-circle-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">맞춤형 정기 관리 & 맞춤 계약</h3>
+                        <p class="text-brand-50 text-base leading-relaxed">
+                            사무실, 상가, 준공 현장 등 사업자 고객을 위한 맞춤 세금계산서 발행 및 고정 거래처 전담 스케줄링 시스템으로 한결같은 청결도와 신뢰를 유지합니다.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/20 flex items-center text-sm font-bold text-white">
+                        <span>기업 / 사업장 전담 솔루션 문의</span>
+                        <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Business Card & Corporate Overview Section -->
-    <section id="about" class="py-16 bg-white border-b border-slate-200">
+    <!-- 5대 전문 서비스 영역 (SERVICES SECTION) -->
+    <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Left: Corporate Philosophy -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm tracking-wider uppercase">
-                        <span class="w-8 h-0.5 bg-brand-600"></span>
-                        About Myeongpum Home Cleaning
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 leading-tight">
-                        고객님의 공간을 내 집처럼,<br/>
-                        <span class="text-brand-600">명품 청소 품질</span>을 약속드립니다.
-                    </h2>
-                    <p class="text-slate-600 text-base leading-relaxed">
-                        명품홈크리닝은 신축 아파트·빌라 입주청소부터 상가, 사무실 정기 관리, 건물 준공청소, 욕실 및 타일 줄눈시공, 새집증후군 케어까지 청소 및 시공에 관한 종합 솔루션을 제공하는 베테랑 전문 기업입니다.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 font-bold text-lg">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-sm">전문 검증팀 상주</h4>
-                                <p class="text-xs text-slate-500 mt-1">하청 없는 전문 직영 인력으로 세심하고 책임감 있는 클리닝 서비스 진행</p>
-                            </div>
-                        </div>
-                        <div class="p-4 rounded-xl bg-slate-50 border border-slate-100 flex items-start gap-3">
-                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-600 flex items-center justify-center shrink-0 font-bold text-lg">
-                                <i class="fa-solid fa-leaf"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 text-sm">친환경 살균 케어</h4>
-                                <p class="text-xs text-slate-500 mt-1">인체에 무해한 친환경 인증 세제 사용 및 고온 스팀, 피톤치드 소독 처리</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right: Digital Business Card Replica UI -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
-                        <!-- Top Header Strip -->
-                        <div class="bg-navy-900 px-6 py-4 text-white flex justify-between items-center">
-                            <span class="text-xs font-bold tracking-widest text-slate-300">BUSINESS CARD</span>
-                            <span class="text-xs bg-gold-500/20 text-gold-400 px-2.5 py-1 rounded-md font-bold border border-gold-500/30">명품홈크리닝</span>
-                        </div>
-                        
-                        <!-- Card Content -->
-                        <div class="p-6 sm:p-8 space-y-6">
-                            <!-- Name & Rep -->
-                            <div class="flex items-end justify-between border-b border-slate-100 pb-4">
-                                <div>
-                                    <span class="text-xs font-bold text-slate-400 block mb-1">대표자</span>
-                                    <h3 class="text-2xl font-black text-slate-900">김 병 수</h3>
-                                </div>
-                                <div class="text-right">
-                                    <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2 py-1 rounded">직통 상담 전용</span>
-                                </div>
-                            </div>
-
-                            <!-- Contact Info Rows -->
-                            <div class="space-y-3 text-sm">
-                                <a href="tel:010-7109-8133" class="flex items-center gap-3 text-slate-700 hover:text-brand-600 font-semibold p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                    <span class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center text-xs font-black">M</span>
-                                    <span class="text-base font-bold">010-7109-8133</span>
-                                    <i class="fa-solid fa-chevron-right text-xs text-slate-300 ml-auto"></i>
-                                </a>
-                                <div class="flex items-center gap-3 text-slate-600 p-2">
-                                    <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center text-xs font-black">F</span>
-                                    <span>Fax: 1515-010-7109-8133</span>
-                                </div>
-                                <a href="mailto:qudtn3@nate.com" class="flex items-center gap-3 text-slate-600 hover:text-brand-600 p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                                    <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center text-xs font-black">E</span>
-                                    <span>qudtn3@nate.com</span>
-                                </a>
-                            </div>
-
-                            <!-- Card Bottom Banner (Identical to Card Image) -->
-                            <div class="pt-4 border-t border-slate-100">
-                                <div class="bg-navy-900 text-white rounded-xl p-3 text-center">
-                                    <h4 class="text-base font-extrabold text-sky-300 tracking-tight">名品홈크리닝</h4>
-                                    <p class="text-[11px] font-bold text-slate-200 mt-1 tracking-tight">
-                                        ★사무실★상가★아파트★입주청소★줄눈시공★새집증후군
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5 Main Services Section -->
-    <section id="services" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">OUR CORE SERVICES</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-900">명품홈크리닝 5대 핵심 사업영역</h2>
-                <p class="text-slate-600 text-base">각 분야별 청소 전문가팀이 최첨단 세척 장비와 검증된 공법으로 시공합니다.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-600 tracking-widest uppercase mb-2">OUR SERVICES</h2>
+                <p class="text-3xl sm:text-4xl font-bold text-navy-900 tracking-tight">
+                    명품홈크리닝 5대 핵심 시공 분야
+                </p>
+                <p class="mt-3 text-slate-500 text-base">각 분야별 검증된 전문가가 최적의 장비와 노하우로 직접 시공합니다.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1: 아파트/신축빌라 입주청소 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="w-14 h-14 rounded-2xl bg-sky-100 text-brand-600 flex items-center justify-center text-2xl font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-house-chimney-window"></i>
+                
+                <!-- Service 1 -->
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/50 p-8 hover:border-brand-500 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-md shadow-brand-600/30">
+                            01
                         </div>
-                        <h3 class="text-xl font-bold text-navy-900">아파트 & 신축빌라 입주청소</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            신축 분양 아파트 및 빌라, 이사 전 잔여 공사 분진과 시멘트 가루, 미세먼지를 완벽하게 제거하여 즉시 쾌적한 입주가 가능하도록 딥클리닝합니다.
+                        <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            아파트 & 신축빌라 입주청소
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            신축/이사 전 분진, 톱밥, 공사 먼지 완벽 제거. 창틀, 서랍장 탈거 청소, 주방/욕실 고온 스팀 소독 포함 디테일 입주 케어.
                         </p>
-                        <ul class="space-y-2 text-xs text-slate-500 font-medium border-t border-slate-100 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 창틀, 베란다, 서랍장 탈거 분진 세척</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 주방 싱크대/후드 기름때 및 오염 소독</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 욕실 배수구, 환풍기 탈거 고온 스팀</li>
-                        </ul>
                     </div>
-                    <div class="pt-6">
-                        <a href="#calculator" onclick="selectServiceOption('apartment')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-3 transition-all">
-                            <span>견적 계산해보기</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>전 서랍장 및 전등갓 탈거 청소</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>배수구·수전 고온 스팀 살균</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/50 p-8 hover:border-brand-500 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-md shadow-brand-600/30">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            사무실 & 상가 정기/특수청소
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            업무 환경의 청결을 책임지는 매니지먼트. 데스크, 바닥 광택 왁싱, 유리창 딥클리닝 및 맞춤 주기적 정기 클리닝.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>바닥 재질별 전용 세척 & 왁스 코팅</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>업무 시간 외 야간/주말 맞춤 작업</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/50 p-8 hover:border-brand-500 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-md shadow-brand-600/30">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            준공청소 (신축/리모델링)
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            건물 신축 및 인테리어 시공 직후 발생하는 보양지 제거, 시멘트 보양 자국, 페인트 자국, 공사 가루 전문 특수 청소.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>대형 현장 전담 인력 및 전문 장비 투입</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>준공 검사 완벽 대응 청결 수준</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/50 p-8 hover:border-brand-500 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-md shadow-brand-600/30">
+                            04
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            욕실 & 타일 줄눈시공
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            곰팡이 방지 친환경 폴리우레아 줄눈 시공. 욕실, 현관, 베란다 타일 백시멘트 탈거 후 반짝이는 프리미엄 라인 완성.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>곰팡이 및 물때 오염 완전 방지</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>다양한 최고급 안료 컬러 선택 가능</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/50 p-8 hover:border-brand-500 hover:bg-white hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center text-xl font-bold mb-6 shadow-md shadow-brand-600/30">
+                            05
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-3 group-hover:text-brand-600 transition-colors">
+                            새집증후군 케어
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            아토피, 비염, 두통의 원인이 되는 유해 화학 물질 차단. 오존 살균 및 차폐 공정, 천연 피톤치드 분사 솔루션.
+                        </p>
+                    </div>
+                    <ul class="text-xs text-slate-500 space-y-2 border-t border-slate-200/80 pt-4">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>휘발성유기화합물(VOCs) 저감 시공</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-brand-600 mr-2"></i>공기질 측정 및 쾌적 공간 케어</li>
+                    </ul>
+                </div>
+
+                <!-- Callout Banner Card -->
+                <div class="rounded-3xl bg-navy-900 text-white p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 text-slate-800 opacity-30 text-9xl font-black">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <span class="inline-block px-3 py-1 rounded-full bg-brand-500/20 text-brand-500 text-xs font-bold mb-4">맞춤 상담</span>
+                        <h3 class="text-2xl font-bold mb-3">어떤 공간이든<br>전문가와 상의하세요!</h3>
+                        <p class="text-slate-400 text-sm">현장 방문 무료 견적 및 합리적인 시공 가격을 제안해 드립니다.</p>
+                    </div>
+                    <div class="mt-8 relative z-10">
+                        <a href="#contact" class="inline-flex items-center text-brand-500 font-bold hover:text-white transition-colors">
+                            <span>간편 문의 작성하기</span>
+                            <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Card 2: 사무실 & 상가 정기/특수청소 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="w-14 h-14 rounded-2xl bg-blue-100 text-brand-600 flex items-center justify-center text-2xl font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-navy-900">사무실 & 상가 정기/특수청소</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            업무 효율성 증가와 쾌적한 매장 환경을 위해 오피스, 매장, 병원, 카페 등의 바닥 세척, 광택 코팅 및 유리창 특수 세척을 제공합니다.
-                        </p>
-                        <ul class="space-y-2 text-xs text-slate-500 font-medium border-t border-slate-100 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 데코타일 / 왁싱 바닥 광택 왁스 코팅</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 통유리, 창문, 외벽 유리 때 전문 세척</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 사업장 맞춤형 주/월 정기 청소 계약</li>
-                        </ul>
-                    </div>
-                    <div class="pt-6">
-                        <a href="#calculator" onclick="selectServiceOption('office')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-3 transition-all">
-                            <span>견적 계산해보기</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 3: 준공청소 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-brand-600 flex items-center justify-center text-2xl font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-helmet-safety"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-navy-900">준공청소</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            건물 신축 및 리모델링 인테리어 공사 후 발생하는 잔재물, 분진, 페인트 자국, 보양지 제거를 전문 인력과 장비로 완벽 정돈합니다.
-                        </p>
-                        <ul class="space-y-2 text-xs text-slate-500 font-medium border-t border-slate-100 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 건축 보양비닐 제거 및 공사 보양재 회수</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 시멘트 독성 자국 및 페인트 찌꺼기 스크랩</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 건용 인스펙션 기준 준공 검사 대비</li>
-                        </ul>
-                    </div>
-                    <div class="pt-6">
-                        <a href="#calculator" onclick="selectServiceOption('post_construction')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-3 transition-all">
-                            <span>견적 계산해보기</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 4: 욕실 & 타일 줄눈시공 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="w-14 h-14 rounded-2xl bg-teal-100 text-brand-600 flex items-center justify-center text-2xl font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-fill-drip"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-navy-900">욕실 & 타일 줄눈시공</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            곰팡이와 물때가 쉽게 생기는 백시멘트를 제거하고, 방수·방오 기능의 고급 친환경 폴리우레아 줄눈제로 욕실 및 현관 타일을 리폼합니다.
-                        </p>
-                        <ul class="space-y-2 text-xs text-slate-500 font-medium border-t border-slate-100 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 곰팡이 방지 99.9% 최고급 친환경 펄 줄눈</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 변색 없는 무기질 다이아몬드 줄눈 재료</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 욕실 바닥, 실리콘 오염 방지 코팅 포함</li>
-                        </ul>
-                    </div>
-                    <div class="pt-6">
-                        <a href="#calculator" onclick="selectServiceOption('grout')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-3 transition-all">
-                            <span>견적 계산해보기</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 5: 새집증후군 케어 -->
-                <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-brand-600 flex items-center justify-center text-2xl font-bold group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                            <i class="fa-solid fa-spray-can-sparkles"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-navy-900">새집증후군 케어</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            새 자재에서 방출되는 포름알데히드, 휘발성 유기화합물(VOCs)을 오존 살균기와 천연 피톤치드 분사 공법으로 정화하여 안전한 공간을 만듭니다.
-                        </p>
-                        <ul class="space-y-2 text-xs text-slate-500 font-medium border-t border-slate-100 pt-4">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 차폐제 시공으로 유해물질 차단</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 고농도 편백나무 피톤치드 연무 소독</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 아토피, 비염 예방 공기질 케어</li>
-                        </ul>
-                    </div>
-                    <div class="pt-6">
-                        <a href="#calculator" onclick="selectServiceOption('sickhouse')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:gap-3 transition-all">
-                            <span>견적 계산해보기</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 6: Direct Call Banner -->
-                <div class="bg-gradient-to-br from-navy-900 to-brand-900 rounded-2xl p-8 text-white shadow-xl flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <span class="px-3 py-1 bg-white/10 text-gold-400 text-xs font-bold rounded-full">맞춤형 현장 상담</span>
-                        <h3 class="text-2xl font-black">특수 현장 또는 대형 프로젝트인가요?</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            건물 전체 청소, 정기 관리 계약, 대형 매장 등은 김병수 대표가 직접 현장 방문 후 맞춤 견적서를 산출해 드립니다.
-                        </p>
-                    </div>
-                    <div class="pt-8">
-                        <a href="tel:010-7109-8133" class="w-full py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center block shadow-lg transition-all">
-                            <i class="fa-solid fa-phone mr-2"></i>010-7109-8133 직접 연결
-                        </a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Before & After Comparison Showcase (Interactive Touch Slider) -->
-    <section id="before-after" class="py-20 bg-white">
+    <!-- INTERACTIVE BEFORE & AFTER SLIDER -->
+    <section id="before-after" class="py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
-                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">BEFORE & AFTER</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-900">명품홈크리닝 생생 시공 비교</h2>
-                <p class="text-slate-600 text-sm sm:text-base">슬라이더를 좌우로 드래그하여 시공 전과 후의 완벽한 변화를 확인해보세요.</p>
-            </div>
-
-            <!-- Case Selection Tabs -->
-            <div class="flex justify-center gap-2 mb-8 overflow-x-auto pb-2">
-                <button onclick="switchBaCase('grout')" id="tab-grout" class="ba-tab px-5 py-2.5 rounded-full text-sm font-bold bg-brand-600 text-white shadow-sm transition-all">
-                    욕실 줄눈 시공
-                </button>
-                <button onclick="switchBaCase('dust')" id="tab-dust" class="ba-tab px-5 py-2.5 rounded-full text-sm font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-                    입주청소 창틀 분진
-                </button>
-                <button onclick="switchBaCase('office')" id="tab-office" class="ba-tab px-5 py-2.5 rounded-full text-sm font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-                    사무실 타일 바닥 광택
-                </button>
-            </div>
-
-            <!-- Interactive Slider Canvas -->
-            <div class="max-w-4xl mx-auto">
-                <div id="slider-wrapper" class="slider-container rounded-2xl overflow-hidden shadow-2xl aspect-[16/10] sm:aspect-[16/9] bg-slate-900">
-                    <!-- AFTER Image (Base Background) -->
-                    <img id="img-after" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" alt="시공 후" class="w-full h-full object-cover">
-                    <span class="absolute top-4 right-4 bg-emerald-600/90 text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-md z-10">
-                        <i class="fa-solid fa-sparkles mr-1"></i> AFTER (시공 후)
-                    </span>
-
-                    <!-- BEFORE Image (Overlay Container) -->
-                    <div id="img-overlay" class="img-overlay">
-                        <img id="img-before" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80" alt="시공 전" class="w-full h-full object-cover max-w-none">
-                        <span class="absolute top-4 left-4 bg-slate-900/90 text-white font-bold text-xs px-3 py-1.5 rounded-full shadow-md z-10">
-                            BEFORE (시공 전)
-                        </span>
-                    </div>
-
-                    <!-- Draggable Divider Handle -->
-                    <div id="slider-handle" class="slider-handle">
-                        <div class="handle-circle">
-                            <i class="fa-solid fa-code-compare text-sm"></i>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-center text-xs text-slate-400 mt-4 flex items-center justify-center gap-1">
-                    <i class="fa-solid fa-hand-pointer"></i> 중앙의 조절선을 드래그하여 전후 차이를 확인하세요.
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-extrabold text-brand-500 tracking-widest uppercase mb-2">REAL BEFORE & AFTER</h2>
+                <p class="text-3xl sm:text-4xl font-bold tracking-tight">
+                    직접 눈으로 확인하는 놀라운 차이
                 </p>
+                <p class="mt-3 text-slate-400 text-sm sm:text-base">슬라이더를 좌우로 드래그(터치)하여 시공 전후 모습을 비교해 보세요.</p>
+            </div>
+
+            <!-- Comparison Container -->
+            <div class="max-w-4xl mx-auto">
+                <div id="ba-container" class="relative w-full aspect-[4/3] sm:aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl select-none border border-slate-700 cursor-ew-resize">
+                    
+                    <!-- After Image (Base) -->
+                    <div class="absolute inset-0 w-full h-full bg-slate-800 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 800 450" preserveAspectRatio="none">
+                            <!-- SVG Mock After Clean Image -->
+                            <rect width="800" height="450" fill="#0F172A"/>
+                            <path d="M 0 300 Q 200 250 400 320 T 800 280 L 800 450 L 0 450 Z" fill="#1E293B"/>
+                            <!-- Bright Kitchen/Living Graphic -->
+                            <rect x="150" y="80" width="500" height="240" rx="16" fill="#1E293B" stroke="#0D9488" stroke-width="4"/>
+                            <circle cx="250" cy="160" r="40" fill="#0D9488" opacity="0.3"/>
+                            <text x="400" y="190" font-family="Pretendard" font-size="28" font-weight="bold" fill="#5EEAD4" text-anchor="middle">AFTER : 반짝이는 100% 클린 공간</text>
+                            <text x="400" y="230" font-family="Pretendard" font-size="16" fill="#94A3B8" text-anchor="middle">고온 스팀 살균 & 오염 완전 제거 완료</text>
+                            <!-- Sparkles -->
+                            <polygon points="180,100 185,115 200,120 185,125 180,140 175,125 160,120 175,115" fill="#5EEAD4"/>
+                            <polygon points="620,120 623,130 633,133 623,136 620,146 617,136 607,133 617,130" fill="#5EEAD4"/>
+                        </svg>
+                        <span class="absolute top-6 right-6 bg-brand-600 text-white font-black text-xs sm:text-sm px-4 py-2 rounded-full shadow-lg">AFTER (시공 후)</span>
+                    </div>
+
+                    <!-- Before Image (Clipped Overlay) -->
+                    <div id="ba-before-overlay" class="absolute top-0 left-0 bottom-0 w-1/2 overflow-hidden bg-slate-900 border-r-2 border-white shadow-2xl">
+                        <div class="absolute top-0 left-0 w-full h-full min-w-[800px] sm:min-w-full flex items-center justify-center" style="width: 100%; height: 100%;">
+                            <svg class="w-full h-full" viewBox="0 0 800 450" preserveAspectRatio="none">
+                                <!-- SVG Mock Before Dirty Image -->
+                                <rect width="800" height="450" fill="#1C1917"/>
+                                <path d="M 0 300 Q 200 250 400 320 T 800 280 L 800 450 L 0 450 Z" fill="#292524"/>
+                                <rect x="150" y="80" width="500" height="240" rx="16" fill="#292524" stroke="#78716C" stroke-width="4"/>
+                                <!-- Grime Spots -->
+                                <circle cx="220" cy="140" r="35" fill="#44403C"/>
+                                <circle cx="580" cy="220" r="45" fill="#44403C"/>
+                                <text x="400" y="190" font-family="Pretendard" font-size="28" font-weight="bold" fill="#D6D3D1" text-anchor="middle">BEFORE : 찌든 때 & 공사 먼지</text>
+                                <text x="400" y="230" font-family="Pretendard" font-size="16" fill="#78716C" text-anchor="middle">시공 전 오염 상태</text>
+                            </svg>
+                        </div>
+                        <span class="absolute top-6 left-6 bg-slate-800 text-slate-300 font-black text-xs sm:text-sm px-4 py-2 rounded-full border border-slate-700 shadow-lg">BEFORE (시공 전)</span>
+                    </div>
+
+                    <!-- Slider Drag Handle -->
+                    <div id="ba-handle" class="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-1 bg-white cursor-ew-resize flex items-center justify-center">
+                        <div class="w-10 h-10 rounded-full bg-white text-navy-900 flex items-center justify-center shadow-xl font-bold text-xs border-2 border-brand-500">
+                            <i class="fa-solid fa-arrows-left-right text-brand-600"></i>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Smart Estimate Calculator Section (Garbage internally removed) -->
-    <section id="calculator" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
-                <span class="text-sky-400 font-bold text-sm tracking-widest uppercase">SMART ESTIMATE</span>
-                <h2 class="text-3xl sm:text-4xl font-black">실시간 스마트 견적 계산기</h2>
-                <p class="text-slate-400 text-sm sm:text-base">원하시는 시공 항목과 평수를 선택하시면 예상 견적을 즉시 확인하실 수 있습니다.</p>
+    <!-- SMART ESTIMATE CALCULATOR (스마트 실시간 견적 계산기) -->
+    <section id="calculator" class="py-24 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-700 font-extrabold text-xs uppercase tracking-wider">SMART CALCULATOR</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mt-3">스마트 실시간 견적 계산기</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">원하시는 서비스와 평수를 선택하시면 예상 견적을 즉시 확인할 수 있습니다.</p>
             </div>
 
-            <div class="max-w-4xl mx-auto bg-slate-800/90 rounded-3xl p-6 sm:p-10 border border-slate-700 shadow-2xl backdrop-blur-sm grid grid-cols-1 lg:grid-cols-12 gap-8">
-                <!-- Left Input Controls -->
-                <div class="lg:col-span-7 space-y-6">
-                    <!-- 1. Service Type -->
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10">
+                <form id="calc-form" class="space-y-8" onsubmit="return false;">
+                    
+                    <!-- 1. 서비스 종류 선택 -->
                     <div>
-                        <label class="block text-sm font-bold text-slate-200 mb-2">1. 서비스 청소/시공 종류 선택</label>
-                        <select id="calcService" onchange="calculatePrice()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-sky-500 font-medium">
-                            <option value="apartment">아파트 & 신축빌라 입주청소</option>
-                            <option value="office">사무실 & 상가 정기/특수청소</option>
-                            <option value="post_construction">건물 준공청소</option>
-                            <option value="grout">욕실 & 타일 줄눈시공 단독</option>
-                            <option value="sickhouse">새집증후군 케어 단독</option>
-                        </select>
+                        <label class="block text-sm font-bold text-navy-900 mb-3">
+                            <i class="fa-solid fa-broom text-brand-600 mr-2"></i>1. 서비스 종류 선택
+                        </label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label class="calc-type-card cursor-pointer p-4 rounded-2xl border-2 border-brand-600 bg-brand-50/50 flex flex-col items-center justify-center text-center transition-all">
+                                <input type="radio" name="calc_type" value="apt" class="sr-only" checked onchange="calculatePrice()">
+                                <i class="fa-solid fa-house-chimney text-2xl text-brand-600 mb-2"></i>
+                                <span class="font-bold text-sm text-navy-900">아파트/신축빌라 입주청소</span>
+                                <span class="text-xs text-slate-500 mt-1">평당 11,000원~</span>
+                            </label>
+                            <label class="calc-type-card cursor-pointer p-4 rounded-2xl border-2 border-slate-200 bg-white hover:border-slate-300 flex flex-col items-center justify-center text-center transition-all">
+                                <input type="radio" name="calc_type" value="office" class="sr-only" onchange="calculatePrice()">
+                                <i class="fa-solid fa-building text-2xl text-slate-600 mb-2"></i>
+                                <span class="font-bold text-sm text-navy-900">사무실/상가 정기청소</span>
+                                <span class="text-xs text-slate-500 mt-1">평당 9,000원~</span>
+                            </label>
+                            <label class="calc-type-card cursor-pointer p-4 rounded-2xl border-2 border-slate-200 bg-white hover:border-slate-300 flex flex-col items-center justify-center text-center transition-all">
+                                <input type="radio" name="calc_type" value="construction" class="sr-only" onchange="calculatePrice()">
+                                <i class="fa-solid fa-helmet-safety text-2xl text-slate-600 mb-2"></i>
+                                <span class="font-bold text-sm text-navy-900">준공 청소 (특수)</span>
+                                <span class="text-xs text-slate-500 mt-1">평당 13,000원~</span>
+                            </label>
+                        </div>
                     </div>
 
-                    <!-- 2. Area Size (평수) -->
+                    <!-- 2. 평수 선택 Slider -->
                     <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <label class="text-sm font-bold text-slate-200">2. 공간 평형(공급 면적) 선택</label>
-                            <span id="pyoungDisplay" class="text-xl font-black text-sky-400">24평 <span class="text-xs text-slate-400 font-normal">(약 79m²)</span></span>
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-bold text-navy-900">
+                                <i class="fa-solid fa-ruler-combined text-brand-600 mr-2"></i>2. 작업 공간 평수
+                            </label>
+                            <span class="text-lg font-extrabold text-brand-600"><span id="py-display">24</span> 평</span>
                         </div>
-                        <input type="range" id="calcPyoung" min="10" max="100" value="24" step="1" oninput="calculatePrice()" class="w-full accent-sky-500 h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer">
-                        <div class="flex justify-between text-xs text-slate-400 mt-2">
+                        <input type="range" id="py-slider" min="10" max="100" value="24" step="1" 
+                               class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-brand-600"
+                               oninput="calculatePrice()">
+                        <div class="flex justify-between text-xs text-slate-400 mt-2 font-medium">
                             <span>10평</span>
                             <span>30평</span>
-                            <span>60평</span>
+                            <span>50평</span>
+                            <span>80평</span>
                             <span>100평 이상</span>
                         </div>
                     </div>
 
-                    <!-- 3. Additional Options (Internal internal appliance cleaning REMOVED) -->
+                    <!-- 3. 추가 옵션 (가전내부세척 제외 3종) -->
                     <div>
-                        <label class="block text-sm font-bold text-slate-200 mb-2">3. 추가 선택 옵션 (선택)</label>
-                        <div class="space-y-2.5">
-                            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-700/60 hover:border-slate-600 cursor-pointer transition-colors">
-                                <input type="checkbox" id="optPhytoncide" onchange="calculatePrice()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 bg-slate-800 border-slate-600">
-                                <span class="text-xs sm:text-sm font-medium text-slate-300">피톤치드 숲속 항균 소독 (+30,000원)</span>
+                        <label class="block text-sm font-bold text-navy-900 mb-3">
+                            <i class="fa-solid fa-plus-circle text-brand-600 mr-2"></i>3. 프리미엄 추가 케어 옵션
+                        </label>
+                        <div class="space-y-3">
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                <div class="flex items-center space-x-3">
+                                    <input type="checkbox" id="opt-phyton" value="50000" class="w-5 h-5 text-brand-600 rounded focus:ring-brand-500" onchange="calculatePrice()">
+                                    <span class="text-sm font-semibold text-slate-800">피톤치드 항균 코팅 (전체 공간)</span>
+                                </div>
+                                <span class="text-xs font-bold text-slate-600">+50,000원</span>
                             </label>
-                            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-700/60 hover:border-slate-600 cursor-pointer transition-colors">
-                                <input type="checkbox" id="optGrout" onchange="calculatePrice()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 bg-slate-800 border-slate-600">
-                                <span class="text-xs sm:text-sm font-medium text-slate-300">욕실 바닥 + 현관 타일 줄눈 코팅 시공 (+150,000원)</span>
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                <div class="flex items-center space-x-3">
+                                    <input type="checkbox" id="opt-tile" value="120000" class="w-5 h-5 text-brand-600 rounded focus:ring-brand-500" onchange="calculatePrice()">
+                                    <span class="text-sm font-semibold text-slate-800">욕실 & 현관 타일 줄눈 시공</span>
+                                </div>
+                                <span class="text-xs font-bold text-slate-600">+120,000원~</span>
                             </label>
-                            <label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-700/60 hover:border-slate-600 cursor-pointer transition-colors">
-                                <input type="checkbox" id="optSteam" onchange="calculatePrice()" class="w-4 h-4 rounded text-sky-500 focus:ring-sky-500 bg-slate-800 border-slate-600">
-                                <span class="text-xs sm:text-sm font-medium text-slate-300">베란다 & 창틀 고온스팀 멸균 세척 (+50,000원)</span>
+                            <label class="flex items-center justify-between p-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer">
+                                <div class="flex items-center space-x-3">
+                                    <input type="checkbox" id="opt-steam" value="40000" class="w-5 h-5 text-brand-600 rounded focus:ring-brand-500" onchange="calculatePrice()">
+                                    <span class="text-sm font-semibold text-slate-800">베란다 & 창틀 집중 고온 스팀 살균</span>
+                                </div>
+                                <span class="text-xs font-bold text-slate-600">+40,000원</span>
                             </label>
                         </div>
                     </div>
-                </div>
 
-                <!-- Right Price Summary Output & Action -->
-                <div class="lg:col-span-5 bg-navy-900/90 rounded-2xl p-6 border border-slate-700 flex flex-col justify-between text-center">
-                    <div class="space-y-6 my-auto py-4">
-                        <span class="text-xs font-bold text-slate-400 tracking-wider uppercase">EXPECTED ESTIMATE</span>
+                    <!-- Calculated Result Box -->
+                    <div class="p-6 rounded-2xl bg-navy-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
                         <div>
-                            <div class="text-xs text-slate-400 mb-1">예상 시공 견적 금액</div>
-                            <div id="totalPriceDisplay" class="text-3xl sm:text-4xl font-black text-sky-400 tracking-tight">
-                                264,000 원~
+                            <span class="text-xs text-slate-400 font-medium">예상 시공 금액 (VAT 별도)</span>
+                            <div class="text-3xl sm:text-4xl font-black text-brand-500 tracking-tight mt-1">
+                                <span id="total-price">264,000</span> <span class="text-lg font-normal text-white">원</span>
                             </div>
-                            <p class="text-[11px] text-slate-400 mt-2">
-                                * 오염도, 층고, 현장 여건에 따라 실제 견적과 소폭 차이가 있을 수 있습니다.
-                            </p>
                         </div>
-
-                        <div class="bg-slate-800/80 rounded-xl p-3 text-xs text-slate-300 text-left space-y-1">
-                            <div class="flex justify-between"><span class="text-slate-400">선택 서비스:</span> <span id="summaryService" class="font-bold text-white">입주청소</span></div>
-                            <div class="flex justify-between"><span class="text-slate-400">선택 면적:</span> <span id="summaryPyoung" class="font-bold text-white">24평</span></div>
-                        </div>
+                        <button type="button" onclick="applyToForm()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold text-sm shadow-md transition-all active:scale-95">
+                            <i class="fa-solid fa-arrow-down mr-2"></i>상담 문의 폼에 자동 반영하기
+                        </button>
                     </div>
 
-                    <button onclick="applyCalcToForm()" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-500 to-sky-500 hover:from-brand-600 hover:to-sky-600 text-white font-bold text-sm shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center gap-2">
-                        <span>이 견적으로 상세 상담 신청하기</span>
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Main Inquiry & Request Section -->
-    <section id="inquiry" class="py-20 bg-white">
+    <!-- CONSULTATION & ESTIMATE FORM (상담 / 견적 문의 폼) -->
+    <section id="contact" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center space-y-3 mb-12">
-                <span class="text-brand-600 font-bold text-sm tracking-widest uppercase">ONLINE INQUIRY</span>
-                <h2 class="text-3xl sm:text-4xl font-black text-navy-900">청소 / 시공 상세 견적 문의 접수</h2>
-                <p class="text-slate-600 text-sm sm:text-base">아래 정보를 작성해주시면 확인 즉시 김병수 대표가 맞춤 상담을 안내해 드립니다.</p>
+            <div class="text-center mb-12">
+                <span class="px-3 py-1 rounded-full bg-brand-100 text-brand-700 font-extrabold text-xs uppercase tracking-wider">ONLINE INQUIRY</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-navy-900 mt-3">상담 및 무료 견적 문의</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-2">아래 필수 항목을 작성해 주시면 담당자가 확인 후 빠르게 연락드립니다.</p>
             </div>
 
             <div class="bg-slate-50 rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl">
-                <form id="detailedForm" onsubmit="handleDetailedSubmit(event)" class="space-y-6">
+                <form id="quote-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
                     
-                    <!-- Required Referrer Field -->
+                    <!-- 1. 고정거래처명 또는 추천인 (필수 입력) -->
                     <div>
-                        <label class="block text-sm font-bold text-slate-900 mb-1">
+                        <label for="referrer" class="block text-sm font-bold text-navy-900 mb-2">
                             고정거래처명 또는 추천인 <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" id="detailReferrer" required placeholder="고정거래처명 또는 추천인 성함을 입력해 주세요 (필수)" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 font-medium">
-                        <p class="text-xs text-slate-500 mt-1">※ 거래처가 없으신 경우 '일반고객' 또는 '없음'을 입력해 주세요.</p>
+                        <input type="text" id="referrer" required 
+                               placeholder="예: (주)명품건설 / 김철수 추천 / 신규 문의"
+                               class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
                     </div>
 
-                    <!-- Contact Name & Phone Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-slate-900 mb-1">
-                                담당자명 (성함) <span class="text-red-500">*</span>
-                            </label>
-                            <input type="text" id="detailName" required placeholder="홍길동" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 font-medium">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-slate-900 mb-1">
-                                연락처 <span class="text-red-500">*</span>
-                            </label>
-                            <input type="tel" id="detailPhone" required placeholder="010-0000-0000" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 font-medium">
-                        </div>
+                    <!-- 2. 고객명 (필수 입력 - 기존 '담당자명'에서 변경) -->
+                    <div>
+                        <label for="client_name" class="block text-sm font-bold text-navy-900 mb-2">
+                            고객명 <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="client_name" required 
+                               placeholder="성함 또는 상호명을 입력해 주세요"
+                               class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
                     </div>
 
-                    <!-- Service Selection & Date Row -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- 3. 연락처 (필수 입력) -->
+                    <div>
+                        <label for="phone" class="block text-sm font-bold text-navy-900 mb-2">
+                            연락처 <span class="text-red-500">*</span>
+                        </label>
+                        <input type="tel" id="phone" required 
+                               placeholder="010-0000-0000"
+                               class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
+                    </div>
+
+                    <!-- 4. 현장 위치 / 주소 -->
+                    <div>
+                        <label for="location" class="block text-sm font-bold text-navy-900 mb-2">
+                            현장 위치 / 주소
+                        </label>
+                        <input type="text" id="location" 
+                               placeholder="시/군/구 및 아파트/건물명 (예: 서울 강남구 역삼동 아파트)"
+                               class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
+                    </div>
+
+                    <!-- 5. 서비스 종류 및 평수 (계산기에서 자동 입력 가능) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-sm font-bold text-slate-900 mb-1">
-                                청소/시공 분야 <span class="text-red-500">*</span>
+                            <label for="service_select" class="block text-sm font-bold text-navy-900 mb-2">
+                                희망 서비스
                             </label>
-                            <select id="detailService" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 font-medium">
+                            <select id="service_select" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
                                 <option value="아파트 & 신축빌라 입주청소">아파트 & 신축빌라 입주청소</option>
                                 <option value="사무실 & 상가 정기/특수청소">사무실 & 상가 정기/특수청소</option>
-                                <option value="건물 준공청소">건물 준공청소</option>
+                                <option value="준공청소 (신축/리모델링)">준공청소 (신축/리모델링)</option>
                                 <option value="욕실 & 타일 줄눈시공">욕실 & 타일 줄눈시공</option>
                                 <option value="새집증후군 케어">새집증후군 케어</option>
-                                <option value="종합 상담 (복합 시공)">종합 상담 (복합 시공)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-bold text-slate-900 mb-1">
-                                희망 시공 일자
+                            <label for="py_input" class="block text-sm font-bold text-navy-900 mb-2">
+                                예상 평수
                             </label>
-                            <input type="date" id="detailDate" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 font-medium">
+                            <input type="text" id="py_input" placeholder="예: 24평" 
+                                   class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
                         </div>
                     </div>
 
-                    <!-- Location Field -->
+                    <!-- 6. 희망 작업 일자 -->
                     <div>
-                        <label class="block text-sm font-bold text-slate-900 mb-1">
-                            현장위치 (지역 및 건물명) <span class="text-red-500">*</span>
+                        <label for="preferred_date" class="block text-sm font-bold text-navy-900 mb-2">
+                            희망 작업일
                         </label>
-                        <input type="text" id="detailLocation" required placeholder="예: 서울시 강남구 역삼동 OO아파트 101동 / 경기도 성남시 사무실" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 font-medium">
+                        <input type="date" id="preferred_date" 
+                               class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all">
                     </div>
 
-                    <!-- Detailed Description -->
+                    <!-- 7. 상세 요청사항 -->
                     <div>
-                        <label class="block text-sm font-bold text-slate-900 mb-1">
-                            상세 문의 내용 및 특이사항
+                        <label for="message" class="block text-sm font-bold text-navy-900 mb-2">
+                            상세 요청사항
                         </label>
-                        <textarea id="detailMemo" rows="4" placeholder="평수, 확장 여부, 특수 오염 상태, 줄눈 시공 부위 등 상세 내용을 자유롭게 작성해 주세요." class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-brand-600 font-medium"></textarea>
+                        <textarea id="message" rows="4" 
+                                  placeholder="추가하고 싶으신 작업이나 특별한 요청사항이 있다면 편하게 적어주세요."
+                                  class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent bg-white text-slate-900 text-sm transition-all resize-none"></textarea>
                     </div>
 
-                    <!-- MANDATORY PRIVACY POLICY AGREEMENT BOX -->
-                    <div class="p-4 rounded-xl bg-slate-100 border border-slate-200 text-xs text-slate-600 space-y-2">
-                        <div class="font-bold text-slate-800 text-xs">
-                            <i class="fa-solid fa-lock text-brand-600 mr-1"></i> [필수] 개인정보 수집 및 이용 동의 안내
-                        </div>
-                        <ul class="list-disc list-inside space-y-1 text-[11px] text-slate-600">
-                            <li><strong>수집 항목:</strong> 현장위치, 담당자명(성함), 연락처, 고정거래처명/추천인</li>
-                            <li><strong>수집 및 이용 목적:</strong> 명품홈크리닝 청소 및 줄눈 시공 견적 상담 및 현장 방문 연락</li>
-                            <li><strong>보유 및 이용 기간:</strong> 상담 완료 및 서비스 제공 완료 시까지 (관련 법령에 따라 보존 필요 시 해당 기간 보존)</li>
-                        </ul>
-                        <div class="pt-2 border-t border-slate-200 flex items-center justify-between">
-                            <label class="flex items-center gap-2 cursor-pointer font-bold text-slate-900 text-xs sm:text-sm">
-                                <input type="checkbox" id="detailConsent" required class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 bg-white border-slate-300">
-                                <span>위 개인정보 수집 및 이용에 동의하는 것으로 합니다. <span class="text-red-500">*</span></span>
-                            </label>
-                        </div>
+                    <!-- Privacy Agreement -->
+                    <div class="p-4 rounded-xl bg-white border border-slate-200 space-y-2">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox" id="privacy_check" required class="w-5 h-5 text-brand-600 rounded focus:ring-brand-500">
+                            <span class="text-xs sm:text-sm font-bold text-slate-800">개인정보 수집 및 이용에 동의합니다 (필수)</span>
+                        </label>
+                        <p class="text-[11px] text-slate-500 pl-8 leading-relaxed">
+                            - 수집항목: 현장위치, 고객명, 연락처<br>
+                            - 수집목적: 클린서비스상담<br>
+                            - 보유기간: 상담완료시까지 (동의하는 것으로 합니다)
+                        </p>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-extrabold text-base shadow-lg shadow-brand-600/30 transition-all flex items-center justify-center gap-2">
-                        <i class="fa-regular fa-paper-plane"></i>
-                        <span>견적 신청서 접수하기</span>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-extrabold text-base shadow-xl shadow-brand-600/30 transition-all hover:-translate-y-0.5 active:translate-y-0">
+                        <i class="fa-solid fa-paper-plane mr-2"></i>견적 및 상담 신청하기
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-navy-900 text-slate-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800">
-                <div class="md:col-span-6 space-y-3">
-                    <div class="flex items-center gap-2 text-white font-black text-2xl">
-                        <span class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-sm">名</span>
-                        <span>명품홈크리닝</span>
+    <!-- DIGITAL BUSINESS CARD & CONTACT INFO SECTION -->
+    <section id="card" class="py-20 bg-navy-900 text-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-brand-500 uppercase tracking-widest">COMPANY INFORMATION</span>
+                <h2 class="text-3xl font-bold mt-2">명품홈크리닝 디지털 사업자 명함</h2>
+            </div>
+
+            <!-- Card UI -->
+            <div class="max-w-2xl mx-auto bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-2xl relative overflow-hidden">
+                <!-- Background Accent Circle -->
+                <div class="absolute -right-16 -top-16 w-48 h-48 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-8 border-b border-slate-700">
+                    <!-- Logo & Brand Name -->
+                    <div class="flex items-center space-x-4">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-500 to-accent-600 p-0.5 shadow-lg">
+                            <div class="w-full h-full bg-navy-900 rounded-[14px] flex items-center justify-center">
+                                <svg class="w-7 h-7 text-brand-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="m9 12 2 2 4-4" stroke="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-black tracking-tight text-white">명품홈크리닝</h3>
+                            <p class="text-xs font-bold text-brand-500 tracking-wider">LUXURY HOME CLEANING</p>
+                        </div>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed max-w-md">
-                        ★사무실 ★상가 ★아파트 ★입주청소 ★줄눈시공 ★새집증후군 전문 케어 업체.<br/>
-                        고객 만족 100%를 위해 최상급 장비와 전문 직영 인력으로 시공합니다.
-                    </p>
+                    <div class="bg-brand-500/10 border border-brand-500/30 px-3 py-1.5 rounded-full text-xs text-brand-400 font-semibold">
+                        공식 인증 지정업체
+                    </div>
                 </div>
-                <div class="md:col-span-6 space-y-2 text-xs md:text-right">
-                    <div class="text-sm font-bold text-white mb-2">고객센터 & 대표 문의</div>
-                    <p class="text-lg font-black text-sky-400"><i class="fa-solid fa-phone mr-1"></i> 010-7109-8133</p>
-                    <p>대표자: 김병수 | Fax: 1515-010-7109-8133</p>
-                    <p>이메일 문의: qudtn3@nate.com</p>
+
+                <!-- Info Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-500 text-sm">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-slate-400 block">대표자</span>
+                                <span class="text-sm font-bold text-white">김병수</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-500 text-sm">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-slate-400 block">직통 대표 전화</span>
+                                <a href="tel:010-7109-8133" class="text-sm font-bold text-brand-400 hover:underline">010-7109-8133</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-500 text-sm">
+                                <i class="fa-solid fa-fax"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-slate-400 block">팩스번호</span>
+                                <span class="text-sm font-semibold text-slate-200">1515-010-7109-8133</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-500 text-sm">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-[11px] text-slate-400 block">대표 이메일</span>
+                                <a href="mailto:qudtn3@nate.com" class="text-sm font-semibold text-slate-200 hover:text-brand-400">qudtn3@nate.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Action Buttons -->
+                <div class="mt-8 pt-6 border-t border-slate-700 flex flex-col sm:flex-row gap-3">
+                    <a href="tel:010-7109-8133" class="flex-1 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold text-center text-xs transition-colors">
+                        <i class="fa-solid fa-phone mr-1.5"></i>전화 바로 연결
+                    </a>
+                    <a href="mailto:qudtn3@nate.com" class="flex-1 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold text-center text-xs transition-colors">
+                        <i class="fa-solid fa-envelope mr-1.5"></i>이메일 문의 보내기
+                    </a>
                 </div>
             </div>
-            <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-                <p>© 명품홈크리닝 (Luxury Home Cleaning). All rights reserved.</p>
-                <div class="flex gap-4">
-                    <a href="#about" class="hover:text-slate-300">회사소개</a>
-                    <a href="#services" class="hover:text-slate-300">사업영역</a>
-                    <a href="#inquiry" class="hover:text-slate-300">견적접수</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <!-- Footer Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-shield-halved text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-base font-bold text-white block">명품홈크리닝</span>
+                        <span class="text-[10px] text-slate-500 uppercase tracking-wider">Luxury Home Cleaning Service</span>
+                    </div>
+                </div>
+
+                <!-- Footer Info -->
+                <div class="text-xs space-y-1 text-slate-400">
+                    <p>상호명: 명품홈크리닝 | 대표자: 김병수 | 대표전화: 010-7109-8133</p>
+                    <p>팩스: 1515-010-7109-8133 | 이메일: qudtn3@nate.com</p>
+                    <p class="text-slate-600 pt-1">Copyright © 명품홈크리닝. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Sticky Floating Contact Bar -->
-    <div class="fixed bottom-0 left-0 right-0 z-30 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-3 flex sm:hidden items-center justify-between gap-3 shadow-2xl">
-        <a href="#calculator" class="flex-1 py-3 bg-slate-800 hover:bg-slate-700 text-sky-400 rounded-xl font-bold text-xs text-center border border-slate-700 flex items-center justify-center gap-1.5">
-            <i class="fa-solid fa-calculator"></i>
-            <span>스마트 견적</span>
-        </a>
-        <a href="#inquiry" class="flex-1 py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-bold text-xs text-center flex items-center justify-center gap-1.5 shadow-md">
-            <i class="fa-solid fa-file-signature"></i>
-            <span>견적 접수</span>
-        </a>
-        <a href="tel:010-7109-8133" class="w-12 h-11 bg-emerald-600 text-white rounded-xl flex items-center justify-center text-lg font-bold">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-    </div>
-
-    <!-- Confirmation & Mail Modal -->
-    <div id="summaryModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 relative space-y-6 animate-fade-in">
-            <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+    <!-- MODAL (견적 접수 완료 모달) -->
+    <div id="result-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in duration-200">
+            <!-- Close Button -->
+            <button type="button" onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-2 text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <div class="text-center space-y-2">
-                <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mx-auto font-bold">
-                    <i class="fa-solid fa-check"></i>
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-2xl mx-auto flex items-center justify-center text-3xl mb-3">
+                    <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <h3 class="text-2xl font-black text-navy-900">견적 문의 내용 작성 완료</h3>
-                <p class="text-slate-500 text-xs">접수 내용을 확인하신 후 메일 전송 또는 복사 버튼을 눌러주세요.</p>
+                <h3 class="text-2xl font-bold text-navy-900">견적 문의 접수 완료</h3>
+                <p class="text-xs text-slate-500 mt-1">작성하신 내용이 성공적으로 정리되었습니다.</p>
             </div>
 
-            <!-- Form Details Summary Box -->
-            <div id="modalSummaryBody" class="bg-slate-50 rounded-2xl p-4 text-xs sm:text-sm space-y-2.5 border border-slate-200 text-slate-700">
-                <!-- Dynamically Filled -->
+            <!-- Summary Text Box -->
+            <div id="modal-summary-box" class="bg-slate-50 rounded-2xl p-4 text-xs font-mono text-slate-800 space-y-1 border border-slate-200 max-h-56 overflow-y-auto mb-6 whitespace-pre-wrap leading-relaxed">
+                <!-- Dynamic Content Injected via JS -->
             </div>
 
             <!-- Action Buttons -->
-            <div class="space-y-2">
-                <button onclick="sendMailAction()" class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>이메일(qudtn3@nate.com)로 즉시 발송하기</span>
+            <div class="space-y-2.5">
+                <a id="mailto-btn" href="#" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-600 to-accent-600 text-white font-bold text-sm flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-paper-plane mr-2"></i>이메일 앱으로 바로 발송 (qudtn3@nate.com)
+                </a>
+                <button type="button" onclick="copyToClipboard()" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs flex items-center justify-center">
+                    <i class="fa-regular fa-copy mr-2"></i>접수 내역 전체 복사하기
                 </button>
-                <div class="grid grid-cols-2 gap-2">
-                    <button onclick="copySummaryText()" class="py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center justify-center gap-1.5">
-                        <i class="fa-solid fa-copy"></i>
-                        <span>문의 내용 복사</span>
-                    </button>
-                    <a href="tel:010-7109-8133" class="py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>전화 직통 상담</span>
-                    </a>
-                </div>
+                <a href="tel:010-7109-8133" class="w-full py-3 rounded-xl border border-slate-300 hover:bg-slate-100 text-navy-900 font-bold text-xs flex items-center justify-center">
+                    <i class="fa-solid fa-phone text-brand-600 mr-2"></i>대표번호 전화 상담 (010-7109-8133)
+                </a>
+            </div>
+
+            <!-- Toast alert -->
+            <div id="copy-toast" class="hidden mt-3 text-center text-xs font-bold text-emerald-600">
+                <i class="fa-solid fa-check mr-1"></i>클립보드에 복사되었습니다!
             </div>
         </div>
     </div>
 
-    <!-- Custom Toast Notification Box -->
-    <div id="toast" class="fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white text-xs sm:text-sm font-bold px-6 py-3 rounded-full shadow-2xl border border-slate-700 transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-4">
-        <span id="toastMessage">안내 문구</span>
-    </div>
 
-    <!-- JavaScript Logic -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Global Calculation & Form State
-        const prices = {
-            apartment: 11000,         // 평당 11,000원
-            office: 9000,             // 평당 9,000원
-            post_construction: 13000, // 평당 13,000원
-            grout: 15000,            // 평당 15,000원
-            sickhouse: 8000            // 평당 8,000원
-        };
+        // -------------------------------------------------------------
+        // 1. Mobile Menu Toggle
+        // -------------------------------------------------------------
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-        const serviceNames = {
-            apartment: '아파트 & 신축빌라 입주청소',
-            office: '사무실 & 상가 정기/특수청소',
-            post_construction: '건물 준공청소',
-            grout: '욕실 & 타일 줄눈시공',
-            sickhouse: '새집증후군 케어'
-        };
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        let currentCalcState = {
-            serviceKey: 'apartment',
-            pyoung: 24,
-            totalPrice: 264000
-        };
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
 
-        let currentFormData = {};
+        // -------------------------------------------------------------
+        // 2. Interactive Before & After Slider
+        // -------------------------------------------------------------
+        const baContainer = document.getElementById('ba-container');
+        const baBeforeOverlay = document.getElementById('ba-before-overlay');
+        const baHandle = document.getElementById('ba-handle');
+        let isDragging = false;
 
-        // 1. Calculate Price Function
+        function updateSlider(xPos) {
+            const rect = baContainer.getBoundingClientRect();
+            let offsetX = xPos - rect.left;
+            if (offsetX < 0) offsetX = 0;
+            if (offsetX > rect.width) offsetX = rect.width;
+            
+            const percentage = (offsetX / rect.width) * 100;
+            baBeforeOverlay.style.width = `${percentage}%`;
+            baHandle.style.left = `${percentage}%`;
+        }
+
+        baContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            updateSlider(e.clientX);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            isDragging = false;
+        });
+
+        // Touch support
+        baContainer.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        window.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            updateSlider(e.touches[0].clientX);
+        });
+
+        window.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        // -------------------------------------------------------------
+        // 3. Smart Estimate Calculator
+        // -------------------------------------------------------------
         function calculatePrice() {
-            const serviceKey = document.getElementById('calcService').value;
-            const pyoung = parseInt(document.getElementById('calcPyoung').value);
-            
-            let baseRate = prices[serviceKey] || 11000;
-            let total = pyoung * baseRate;
+            const pySlider = document.getElementById('py-slider');
+            const pyDisplay = document.getElementById('py-display');
+            const totalPriceEl = document.getElementById('total-price');
 
-            // Extra Options
-            if (document.getElementById('optPhytoncide').checked) total += 30000;
-            if (document.getElementById('optGrout').checked) total += 150000;
-            if (document.getElementById('optSteam').checked) total += 50000;
+            const pyVal = parseInt(pySlider.value, 10);
+            pyDisplay.textContent = pyVal;
 
-            currentCalcState = {
-                serviceKey: serviceKey,
-                pyoung: pyoung,
-                totalPrice: total
-            };
+            // Base price per py
+            const typeRadios = document.getElementsByName('calc_type');
+            let baseRate = 11000;
+            typeRadios.forEach(radio => {
+                if (radio.checked) {
+                    if (radio.value === 'apt') baseRate = 11000;
+                    else if (radio.value === 'office') baseRate = 9000;
+                    else if (radio.value === 'construction') baseRate = 13000;
 
-            // Update UI
-            document.getElementById('pyoungDisplay').innerHTML = `${pyoung}평 <span class="text-xs text-slate-400 font-normal">(약 ${Math.round(pyoung * 3.3)}m²)</span>`;
-            document.getElementById('totalPriceDisplay').innerText = total.toLocaleString() + ' 원~';
-            document.getElementById('summaryService').innerText = serviceNames[serviceKey];
-            document.getElementById('summaryPyoung').innerText = pyoung + '평';
+                    // Style active card
+                    const label = radio.closest('.calc-type-card');
+                    document.querySelectorAll('.calc-type-card').forEach(c => {
+                        c.classList.remove('border-brand-600', 'bg-brand-50/50');
+                        c.classList.add('border-slate-200', 'bg-white');
+                    });
+                    if (label) {
+                        label.classList.remove('border-slate-200', 'bg-white');
+                        label.classList.add('border-brand-600', 'bg-brand-50/50');
+                    }
+                }
+            });
+
+            let total = pyVal * baseRate;
+
+            // Options
+            if (document.getElementById('opt-phyton').checked) total += 50000;
+            if (document.getElementById('opt-tile').checked) total += 120000;
+            if (document.getElementById('opt-steam').checked) total += 40000;
+
+            totalPriceEl.textContent = total.toLocaleString();
         }
 
-        function selectServiceOption(key) {
-            document.getElementById('calcService').value = key;
-            calculatePrice();
+        // Apply calculated data to form
+        function applyToForm() {
+            const pyVal = document.getElementById('py-slider').value;
+            const typeRadios = document.getElementsByName('calc_type');
+            let selectedTypeName = '아파트 & 신축빌라 입주청소';
+
+            typeRadios.forEach(radio => {
+                if (radio.checked) {
+                    if (radio.value === 'apt') selectedTypeName = '아파트 & 신축빌라 입주청소';
+                    else if (radio.value === 'office') selectedTypeName = '사무실 & 상가 정기/특수청소';
+                    else if (radio.value === 'construction') selectedTypeName = '준공청소 (신축/리모델링)';
+                }
+            });
+
+            document.getElementById('service_select').value = selectedTypeName;
+            document.getElementById('py_input').value = `${pyVal}평 (예상 금액: ${document.getElementById('total-price').textContent}원)`;
+
+            // Scroll to contact form smoothly
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function applyCalcToForm() {
-            const serviceName = serviceNames[currentCalcState.serviceKey];
-            document.getElementById('detailService').value = serviceName;
-            
-            const memoField = document.getElementById('detailMemo');
-            memoField.value = `[스마트 견적 계산기 연동]\n- 선택 서비스: ${serviceName}\n- 선택 평수: ${currentCalcState.pyoung}평\n- 예상 견적 금액: ${currentCalcState.totalPrice.toLocaleString()}원\n\n상세상담 요청합니다.`;
+        // -------------------------------------------------------------
+        // 4. Form Submission & Modal Handling
+        // -------------------------------------------------------------
+        let currentSummaryText = "";
 
-            document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' });
-            showToast('스마트 견적 정보가 상세 신청서에 자동 입력되었습니다.');
-        }
-
-        // 2. Form Submission & Validation
-        function handleDetailedSubmit(e) {
+        function handleFormSubmit(e) {
             e.preventDefault();
 
-            const referrer = document.getElementById('detailReferrer').value.trim();
-            const name = document.getElementById('detailName').value.trim();
-            const phone = document.getElementById('detailPhone').value.trim();
-            const service = document.getElementById('detailService').value;
-            const date = document.getElementById('detailDate').value || '상담 후 결정';
-            const location = document.getElementById('detailLocation').value.trim();
-            const memo = document.getElementById('detailMemo').value.trim() || '없음';
-            const consent = document.getElementById('detailConsent').checked;
+            const referrer = document.getElementById('referrer').value.trim();
+            const clientName = document.getElementById('client_name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const location = document.getElementById('location').value.trim() || '미기재';
+            const service = document.getElementById('service_select').value;
+            const py = document.getElementById('py_input').value.trim() || '미기재';
+            const date = document.getElementById('preferred_date').value || '미정';
+            const message = document.getElementById('message').value.trim() || '없음';
 
-            if (!referrer) {
-                showToast("고정거래처명 또는 추천인을 필수 입력해 주세요.");
-                document.getElementById('detailReferrer').focus();
-                return;
-            }
+            currentSummaryText = `[명품홈크리닝 온라인 상담/견적 접수]
+----------------------------------
+■ 고정거래처명/추천인: ${referrer}
+■ 고객명: ${clientName}
+■ 연락처: ${phone}
+■ 현장위치: ${location}
+■ 신청서비스: ${service}
+■ 예상평수: ${py}
+■ 희망작업일: ${date}
+■ 상세요청사항: ${message}
+----------------------------------
+접수일시: ${new Date().toLocaleString('ko-KR')}`;
 
-            if (!consent) {
-                showToast("개인정보 수집 및 이용 동의가 필요합니다.");
-                return;
-            }
+            document.getElementById('modal-summary-box').textContent = currentSummaryText;
 
-            currentFormData = {
-                referrer: referrer,
-                name: name,
-                phone: phone,
-                service: service,
-                date: date,
-                location: location,
-                memo: memo
-            };
+            // Set up mailto link
+            const mailtoSubject = encodeURIComponent(`[견적문의] ${clientName} 고객님 / ${referrer}`);
+            const mailtoBody = encodeURIComponent(currentSummaryText);
+            document.getElementById('mailto-btn').href = `mailto:qudtn3@nate.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-            openSummaryModal();
-        }
-
-        function openSummaryModal() {
-            const body = document.getElementById('modalSummaryBody');
-            body.innerHTML = `
-                <div class="flex justify-between border-b border-slate-200 pb-2">
-                    <span class="text-slate-500 font-bold">고정거래처명 / 추천인:</span>
-                    <span class="font-bold text-brand-600">${escapeHtml(currentFormData.referrer)}</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200 pb-2">
-                    <span class="text-slate-500">담당자명:</span>
-                    <span class="font-bold text-slate-900">${escapeHtml(currentFormData.name)}</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200 pb-2">
-                    <span class="text-slate-500">연락처:</span>
-                    <span class="font-bold text-slate-900">${escapeHtml(currentFormData.phone)}</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200 pb-2">
-                    <span class="text-slate-500">신청 분야:</span>
-                    <span class="font-bold text-slate-900">${escapeHtml(currentFormData.service)}</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200 pb-2">
-                    <span class="text-slate-500">희망 일자:</span>
-                    <span class="font-bold text-slate-900">${escapeHtml(currentFormData.date)}</span>
-                </div>
-                <div class="flex justify-between border-b border-slate-200 pb-2">
-                    <span class="text-slate-500">현장 위치:</span>
-                    <span class="font-bold text-slate-900">${escapeHtml(currentFormData.location)}</span>
-                </div>
-                <div class="pt-1">
-                    <span class="text-slate-500 block mb-1">문의 및 특이사항:</span>
-                    <div class="p-2.5 bg-white rounded-lg border border-slate-200 text-slate-800 text-xs whitespace-pre-wrap">${escapeHtml(currentFormData.memo)}</div>
-                </div>
-            `;
-
-            const modal = document.getElementById('summaryModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            // Show Modal
+            document.getElementById('result-modal').classList.remove('hidden');
         }
 
         function closeModal() {
-            const modal = document.getElementById('summaryModal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
+            document.getElementById('result-modal').classList.add('hidden');
+            document.getElementById('copy-toast').classList.add('hidden');
         }
 
-        function sendMailAction() {
-            const recipient = "qudtn3@nate.com";
-            const subject = encodeURIComponent(`[명품홈크리닝 견적문의] ${currentFormData.name}님 (${currentFormData.service})`);
-            const bodyText = `[명품홈크리닝 견적 신청서]
+        function copyToClipboard() {
+            if (!currentSummaryText) return;
 
-■ 고정거래처명 또는 추천인: ${currentFormData.referrer}
-■ 담당자명: ${currentFormData.name}
-■ 연락처: ${currentFormData.phone}
-■ 신청분야: ${currentFormData.service}
-■ 희망일자: ${currentFormData.date}
-■ 현장위치: ${currentFormData.location}
-■ 상세 내용:
-${currentFormData.memo}
-
----------------------------------------
-※ 위 개인정보 수집 및 이용(클린서비스상담)에 동의함.`;
-
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
-            showToast("이메일 클라이언트가 실행됩니다.");
-        }
-
-        function copySummaryText() {
-            const textToCopy = `[명품홈크리닝 견적 신청 정보]
-- 고정거래처명/추천인: ${currentFormData.referrer}
-- 담당자명: ${currentFormData.name}
-- 연락처: ${currentFormData.phone}
-- 신청분야: ${currentFormData.service}
-- 희망일자: ${currentFormData.date}
-- 현장위치: ${currentFormData.location}
-- 문의내용: ${currentFormData.memo}`;
-
-            const tempElem = document.createElement("textarea");
-            tempElem.value = textToCopy;
-            document.body.appendChild(tempElem);
-            tempElem.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempElem);
-
-            showToast("접수 내용이 클립보드에 복사되었습니다!");
-        }
-
-        function showToast(msg) {
-            const toast = document.getElementById('toast');
-            document.getElementById('toastMessage').innerText = msg;
-            toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
-            toast.classList.add('opacity-100', 'translate-y-0');
-
-            setTimeout(() => {
-                toast.classList.remove('opacity-100', 'translate-y-0');
-                toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
-            }, 3000);
-        }
-
-        function escapeHtml(str) {
-            if (!str) return '';
-            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
-        }
-
-        // 3. Before & After Slider Logic
-        const cases = {
-            grout: {
-                before: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80',
-                after: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80'
-            },
-            dust: {
-                before: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80',
-                after: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80'
-            },
-            office: {
-                before: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80',
-                after: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80'
+            // Legacy fallback using textarea copy (robust inside iframe environments)
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = currentSummaryText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                const toast = document.getElementById('copy-toast');
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 3000);
+            } catch (err) {
+                console.error('복사 실패:', err);
             }
-        };
-
-        function switchBaCase(key) {
-            document.querySelectorAll('.ba-tab').forEach(btn => {
-                btn.classList.remove('bg-brand-600', 'text-white');
-                btn.classList.add('bg-slate-100', 'text-slate-600');
-            });
-            const activeTab = document.getElementById(`tab-${key}`);
-            if (activeTab) {
-                activeTab.classList.remove('bg-slate-100', 'text-slate-600');
-                activeTab.classList.add('bg-brand-600', 'text-white');
-            }
-
-            const c = cases[key];
-            if (c) {
-                document.getElementById('img-before').src = c.before;
-                document.getElementById('img-after').src = c.after;
-            }
+            document.body.removeChild(tempTextArea);
         }
 
-        // Slider Touch & Mouse Drag Handler
-        let isDragging = false;
-        const sliderWrapper = document.getElementById('slider-wrapper');
-        const imgOverlay = document.getElementById('img-overlay');
-        const sliderHandle = document.getElementById('slider-handle');
-
-        function setSliderPosition(x) {
-            const rect = sliderWrapper.getBoundingClientRect();
-            let offsetX = x - rect.left;
-            if (offsetX < 0) offsetX = 0;
-            if (offsetX > rect.width) offsetX = rect.width;
-
-            const percentage = (offsetX / rect.width) * 100;
-            imgOverlay.style.width = `${percentage}%`;
-            sliderHandle.style.left = `${percentage}%`;
-        }
-
-        sliderWrapper.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            setSliderPosition(e.clientX);
-        });
-        window.addEventListener('mouseup', () => isDragging = false);
-        window.addEventListener('mousemove', (e) => {
-            if (isDragging) setSliderPosition(e.clientX);
-        });
-
-        // Touch events for mobile responsiveness
-        sliderWrapper.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            setSliderPosition(e.touches[0].clientX);
-        });
-        window.addEventListener('touchend', () => isDragging = false);
-        window.addEventListener('touchmove', (e) => {
-            if (isDragging) setSliderPosition(e.touches[0].clientX);
-        });
-
-        // Window Onload Init
+        // Initialize Price Calculation on Load
         window.onload = function() {
             calculatePrice();
         };
